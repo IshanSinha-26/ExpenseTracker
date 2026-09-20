@@ -1,0 +1,402 @@
+/* =========================
+   EXPENSE PAGE
+========================= */
+
+.expense-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 30px;
+
+    margin-bottom: 7px;
+}
+
+.page-header p {
+    color: #666;
+}
+
+
+/* =========================
+   ADD BUTTON
+========================= */
+
+.add-expense-btn {
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #222;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.add-expense-btn:hover {
+    background: #444;
+}
+
+
+/* =========================
+   FILTERS
+========================= */
+
+.filter-section {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 20px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.search-box,
+.filter-box {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.search-box label,
+.filter-box label {
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #555;
+}
+
+.search-box input,
+.filter-box input,
+.filter-box select {
+    padding: 11px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    background: white;
+}
+
+.search-box input:focus,
+.filter-box input:focus,
+.filter-box select:focus {
+    outline: none;
+
+    border-color: #222;
+}
+
+
+/* =========================
+   EXPENSE COUNT
+========================= */
+
+#expenseCount {
+    font-size: 13px;
+
+    color: #666;
+}
+
+
+/* =========================
+   EXPENSE TABLE
+========================= */
+
+#expenseTable {
+    width: 100%;
+}
+
+.expense-table-row {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 2fr 1fr 1.2fr 1.5fr;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 14px;
+}
+
+.expense-table-row.header {
+    font-weight: bold;
+
+    color: #666;
+}
+
+.expense-table-row:last-child {
+    border-bottom: none;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.action-buttons {
+    display: flex;
+
+    gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+
+    padding: 7px 10px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+.edit-btn {
+    background: #eee;
+
+    color: #222;
+}
+
+.delete-btn {
+    background: #222;
+
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #ddd;
+}
+
+.delete-btn:hover {
+    background: #444;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    width: 100%;
+
+    max-width: 500px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 30px;
+}
+
+.modal-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.modal-header h2 {
+    font-size: 22px;
+}
+
+.close-btn {
+    border: none;
+
+    background: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    color: #666;
+}
+
+.close-btn:hover {
+    color: #222;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.modal .form-group {
+    margin-bottom: 18px;
+}
+
+.modal .form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.modal .form-group input,
+.modal .form-group select {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+.modal .form-group input:focus,
+.modal .form-group select:focus {
+    outline: none;
+
+    border-color: #222;
+}
+
+.save-expense-btn {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #222;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.save-expense-btn:hover {
+    background: #444;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: #666;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .filter-section {
+        grid-template-columns: 1fr;
+    }
+
+    .expense-table-row {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .expense-table-row.header {
+        display: none;
+    }
+
+    .page-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .expense-container {
+        width: 95%;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+
+}

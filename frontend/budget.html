@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Budget - Expense Tracker</title>
+
+    <link rel="stylesheet"
+          href="css/budget.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Expense Tracker
+        </div>
+
+        <div class="nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="expenses.html">
+                Expenses
+            </a>
+
+            <a href="budget.html"
+               class="active">
+                Budget
+            </a>
+
+            <a href="categories.html">
+                Categories
+            </a>
+
+            <a href="login.html">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Content -->
+
+    <main class="budget-container">
+
+        <div class="welcome-section">
+
+            <h1>
+                Monthly Budget
+            </h1>
+
+            <p>
+                Set and manage your spending limit.
+            </p>
+
+        </div>
+
+
+        <!-- Budget Card -->
+
+        <section class="budget-card">
+
+            <h2>
+                Set Your Budget
+            </h2>
+
+            <p class="description">
+                Set the maximum amount you want
+                to spend this month.
+            </p>
+
+
+            <form id="budgetForm">
+
+                <label for="budgetAmount">
+                    Monthly Budget
+                </label>
+
+                <div class="input-group">
+
+                    <span>
+                        ₹
+                    </span>
+
+                    <input
+                        type="number"
+                        id="budgetAmount"
+                        placeholder="Enter amount"
+                        min="1"
+                        step="0.01"
+                        required
+                    >
+
+                </div>
+
+
+                <button type="submit">
+                    Save Budget
+                </button>
+
+            </form>
+
+
+            <p id="message"></p>
+
+        </section>
+
+
+        <!-- Current Budget -->
+
+        <section class="current-budget">
+
+            <h2>
+                Current Budget
+            </h2>
+
+            <div class="budget-value">
+
+                <span>
+                    ₹
+                </span>
+
+                <strong id="currentBudget">
+                    0.00
+                </strong>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/budget.js"></script>
+
+</body>
+
+</html>

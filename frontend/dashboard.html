@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Expense Tracker</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Expense Tracker
+        </div>
+
+        <div class="nav-links">
+
+            <a href="dashboard.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="expenses.html">
+                Expenses
+            </a>
+
+            <a href="budget.html">
+                Budget
+            </a>
+
+            <a href="categories.html">
+                Categories
+            </a>
+            <a href="#" id="logoutLink">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Content -->
+
+    <main class="dashboard-container">
+
+        <div class="welcome-section">
+
+            <h1>
+                Welcome back!
+            </h1>
+
+            <p>
+                Here's your spending overview.
+            </p>
+
+        </div>
+
+
+        <!-- Summary Cards -->
+
+        <section class="summary-cards">
+
+            <div class="summary-card">
+
+                <p>Total Spending</p>
+
+                <h2 id="totalSpending">
+                    ₹0
+                </h2>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <p>This Month</p>
+
+                <h2 id="monthlySpending">
+                    ₹0
+                </h2>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <p>Monthly Budget</p>
+
+                <h2 id="monthlyBudget">
+                    ₹0
+                </h2>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <p>Remaining</p>
+
+                <h2 id="remainingBudget">
+                    ₹0
+                </h2>
+
+            </div>
+
+        </section>
+
+        <!-- Budget Alert -->
+
+        <section id="budgetAlert" class="budget-alert">
+
+        </section>
+
+
+        <!-- Dashboard Grid -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- Monthly Spending -->
+
+            <div class="dashboard-card">
+
+                <h2>
+                    Monthly Spending
+                </h2>
+
+                <div class="chart">
+                </div>
+
+            </div>
+
+
+            <!-- Category Spending -->
+
+            <div class="dashboard-card">
+
+                <h2>
+                    Category Spending
+                </h2>
+
+                <div id="categorySpending" class="category-list">
+
+                    <!-- Category spending will be loaded here -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Recent Expenses -->
+
+        <section class="dashboard-card recent-expenses">
+
+            <div class="section-header">
+
+                <h2>
+                    Recent Expenses
+                </h2>
+
+                <a href="#">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div id="recentExpenses" class="expense-table">
+
+                <div class="expense-row header">
+
+                    <span>
+                        Category
+                    </span>
+
+                    <span>
+                        Description
+                    </span>
+
+                    <span>
+                        Amount
+                    </span>
+
+                    <span>
+                        Date
+                    </span>
+
+                </div>
+
+
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

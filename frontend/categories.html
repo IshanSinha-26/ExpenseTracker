@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Categories - Expense Tracker</title>
+
+    <link rel="stylesheet"
+          href="CSS/categories.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Expense Tracker
+        </div>
+
+        <div class="nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="expenses.html">
+                Expenses
+            </a>
+
+            <a href="budget.html">
+                Budget
+            </a>
+
+            <a href="categories.html"
+               class="active">
+                Categories
+            </a>
+
+            <a href="login.html">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="container">
+
+        <div class="page-header">
+
+            <div>
+
+                <h1>
+                    Categories
+                </h1>
+
+                <p>
+                    Manage your expense categories
+                </p>
+
+            </div>
+
+            <button
+                id="addCategoryButton"
+                class="add-button">
+
+                + Add Category
+
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             ADD CATEGORY FORM
+        ========================== -->
+
+        <div
+            id="categoryForm"
+            class="category-form hidden">
+
+            <h2>
+                Add Category
+            </h2>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="categoryName">
+                        Category Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="categoryName"
+                        placeholder="e.g. Food"
+                        maxlength="50">
+
+                </div>
+
+                <div class="form-actions">
+
+                    <button
+                        id="saveCategoryButton"
+                        class="save-button">
+
+                        Save
+
+                    </button>
+
+                    <button
+                        id="cancelCategoryButton"
+                        class="cancel-button">
+
+                        Cancel
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <p
+                id="categoryMessage"
+                class="message">
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             CATEGORY LIST
+        ========================== -->
+
+        <div class="category-section">
+
+            <h2>
+                Your Categories
+            </h2>
+
+            <div
+                id="categoryList"
+                class="category-list">
+
+                <!-- Categories will be loaded here -->
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="JS/categories.js"></script>
+
+</body>
+
+</html>
